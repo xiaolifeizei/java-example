@@ -1,7 +1,19 @@
 server:
   port: 8005
 
-
+spring:
+  redis:
+    #Redis单机单实例
+    #    database: 1
+    #    host: 192.168.217.129
+    #    port: 6379
+    #    password: 123456
+    #Redis哨兵模式
+    database: 0        #选择redis的第二个数据库
+    password: 123456   #redis密码
+    sentinel:
+      master: mymaster #哨兵的名字 #下面是所有哨兵集群节点
+      nodes: 192.168.230.200:26379,192.168.230.201:26379
 
 
 
